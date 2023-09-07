@@ -9,12 +9,9 @@ function getDateAndTime() {
 
     const date = new Date()
 
-    const hours = date.getUTCHours();
-    const minutes = date.getUTCMinutes();
-    const seconds = date.getUTCSeconds();
     const milliseconds = date.getUTCMilliseconds();
 
-    const utcTime = `${hours}:${minutes}:${seconds}.${milliseconds}`
+    const utcTime = milliseconds;
 
     currentUTCTime.innerHTML = utcTime;
 }
