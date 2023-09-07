@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Noto+Sans&family=Pacifico&display=swap");
+
+:root {
+    --bg-color: #242830;
+    --border-color: #4f739d;
+    --text-color: #f6f5f4;
+    --text-font: "Noto Sans", sans-serif;
+    --title-font: "Courier Prime", monospace;
+    --logo-font: "Pacifico", cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--text-font);
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem 0.4rem;
+    background: linear-gradient(145deg,
+            rgba(36, 40, 48, 0.8),
+            rgba(20, 20, 20, 0.8));
+    box-shadow: 5px 5px 15px var(--border-color),
+        -15px -15px 25px var(--border-color);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    width: 100%;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-family: var(--logo-font);
+    color: var(--text-color);
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.cta {
+    font-family: var(--title-font);
+    text-transform: capitalize;
+    padding: 0.5rem 0.4rem;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border-radius: 5px;
+    animation: glowing 1500ms infinite, slideInLeft 1.5s ease-in-out;
+}
+
+@keyframes glowing {
+    0% {
+        box-shadow: 0 1px 3px #255ad3;
+    }
+
+    50% {
+        box-shadow: 0 1px 10px #255ad3;
+    }
+
+    100% {
+        box-shadow: 0 1px 20px #255ad3;
+    }
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 6rem 0;
+}
+
+.data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.8rem;
+    padding: 1rem 0;
+}
+
+.display_img {
+    border-right: 1px solid var(--text-color);
+    padding: 0 2rem;
+}
+
+img {
+    max-width: 25rem;
+    max-height: 22rem;
+    border-radius: 1rem;
+    box-shadow: 5px 1px 10px var(--border-color),
+        -5px -5px 15px var(--border-color);
+}
+
+.personal_data {
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.name_and_track .name_track_paragragh span,
+.time_and_day span, .github_link .link_paragraph span a {
+    color: #255ad3;
+}
+
+.time_and_day {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.github_link .link_paragraph span a:hover {
+    color: var(--text-color);
+}
+
+.github_link .link_paragraph span a:focus, .github_link .link_paragraph span a:active {
+    color: red;
+}
+
+@media screen and (max-width: 1115px) {
+    main{
+        margin: 4rem 0;
+    }
+
+    .data {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .display_img {
+        border-right: none;
+    }
+
+    .personal_data {
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 456px) {
+    img {
+        max-width: 100%;
+    }
+}

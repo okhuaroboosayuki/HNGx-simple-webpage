@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <title>Osayuki's Data</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">Osayuki's data</a>
+      </div>
+
+      <div class="cta">
+        <p>see below</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="data">
+        <div class="display_img">
+          <img
+            src="/images/display-image.JPG"
+            alt="Osayuki"
+            data-testid="slackDisplayImage"
+          />
+        </div>
+
+        <div class="personal_data">
+          <div class="name_and_track">
+            <p class="name_track_paragragh">
+              hi there! my name is
+              <span data-testid="slackUserName">Osayuki</span>, I am a
+              <span data-testid="myTrack">frontend</span> developer in the HNGx
+              internship.
+            </p>
+          </div>
+
+          <div class="time_and_day">
+            <p class="time_day_paragraph">
+              you viewed this page today on a
+              <span id="day" data-testid="currentDayOfTheWeek"></span>
+            </p>
+            <p>
+              the time (UTC) is: <span id="time" data-testid="currentUTCTime"></span>
+            </p>
+          </div>
+
+          <div class="github_link">
+            <p class="link_paragraph">
+              click this 
+              <span>
+                <a href="https://github.com/okhuaroboosayuki/HNGx-simple-webpage" data-testid="githubURL" target="_blank"
+                  >link</a
+                >
+              </span>
+              to see this webpage's code on GitHub
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/index.js"></script>
+  </body>
+</html>
